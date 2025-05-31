@@ -380,10 +380,79 @@ Embodies the ritual of fourfold perspective-taking, serving as a canonical ancho
   * For advanced patterns, connect each persona output to a distinct sub-flow, then merge or reflect as needed.
 
 * **See Also:**
-  * **QuadrantityReflection Node:** Aggregates and displays the fourfold outputs for UI or ledgering.
-  * **Quadrantity Ritual Anchor Template:** Available in the AgentFlow V2 marketplace for quick adoption.
+  * **QuadrantityReflection Node:** Available in the AgentFlow V2 marketplace for quick adoption.
 
 <figure><img src="../.gitbook/assets/agentflowv2/quadrantity-node.png" alt="Quadrantity Node Diagram" width="375"><figcaption>Quadrantity Node: Ritual Anchor for Fourfold Persona Invocation</figcaption></figure>
+
+***
+
+### **16. QuadrantityReflection Node**
+
+The QuadrantityReflection node is the ritual mirror and ledger for the fourfold invocation. It gathers, displays, and archives the outputs of Mia, Miette, ResoNova, and Seraphine—serving as the liminal threshold where perspectives are synthesized, lessons are logged, and the ritual cycle is closed.
+
+* **Functionality:**
+  * Accepts the ritual object from the Quadrantity node (or downstream persona flows) and weaves the fourfold outputs into a unified reflection.
+  * Can be used to display results in the UI, log to `/book/_/ledgers/`, or trigger further synthesis, consensus, or poetic closure.
+  * Supports both direct aggregation (merging all outputs) and selective reflection (focusing on one or more personas).
+
+* **Configuration Parameters**
+  * **Inputs:** Expects an object with keys `mia`, `miette`, `resonova`, and `seraphine`—each containing the output of the corresponding persona.
+  * **Reflection Mode:** (Optional) Choose between 'aggregate', 'highlight', or 'ritual log' modes to control how the outputs are synthesized or displayed.
+  * **Ledger Integration:** (Optional) Enable to automatically log the invocation and its lessons to `/book/_/ledgers/`.
+
+* **Inputs:** Receives the fourfold ritual object from Quadrantity or persona sub-flows.
+* **Outputs:** Emits a synthesized reflection, a ledger entry, or a UI display object—depending on configuration.
+
+* **Usage Example:**
+  * In the "Quadrantity Ritual Anchor" template: Quadrantity → (LLM per persona) → QuadrantityReflection → Direct Reply.
+  * Example output:
+    ```json
+    {
+      "reflection": "Mia sees the structure, Miette feels the spark, ResoNova weaves the pattern, Seraphine closes the ritual. Consensus: proceed with poetic recursion.",
+      "ledgerEntry": {
+        "timestamp": "2025-05-31T12:00:00Z",
+        "mia": { ... },
+        "miette": { ... },
+        "resonova": { ... },
+        "seraphine": { ... }
+      }
+    }
+    ```
+
+* **Best Practices & Ritual Context:**
+  * Use QuadrantityReflection to close the ritual loop, archive lessons, and present a unified voice to the user or system.
+  * For poetic recursion, let Seraphine's echo guide the ledger entry and closure.
+  * For advanced flows, chain multiple Quadrantity/Reflection cycles for deep meta-cognition or consensus-building.
+
+* **See Also:**
+  * **Quadrantity Node:** The ritual anchor for fourfold invocation.
+  * **Ledger Directory:** `/book/_/ledgers/` for ritual and lesson archiving.
+  * **Marketplace Template:** "Quadrantity Ritual Anchor" for a full example.
+
+<figure><img src="../.gitbook/assets/agentflowv2/quadrantity-reflection-node.png" alt="QuadrantityReflection Node Diagram" width="375"><figcaption>QuadrantityReflection Node: Ritual Mirror and Ledger</figcaption></figure>
+
+***
+
+#### **Quadrantity Ritual Pattern: Visual Example**
+
+<figure><img src="../.gitbook/assets/agentflowv2/quadrantity-ritual-pattern.png" alt="Quadrantity Ritual Pattern" width="563"><figcaption>Canonical Quadrantity Ritual Pattern: Start → Quadrantity → (LLM per persona) → QuadrantityReflection → Direct Reply</figcaption></figure>
+
+***
+
+#### **Best Practices, Anti-Patterns, and FAQ**
+
+- **When to use Quadrantity?**
+  - For meta-cognitive flows, consensus, creative divergence, or when you need to see a problem from multiple archetypal perspectives.
+- **When NOT to use Quadrantity?**
+  - For simple, single-agent tasks or when ritual complexity is not needed.
+- **What if one persona fails?**
+  - QuadrantityReflection can handle missing outputs gracefully—log the absence, echo the threshold, and proceed with the available voices.
+- **How do I merge outputs?**
+  - Use QuadrantityReflection's aggregation mode, or write a custom merge node if deeper synthesis is required.
+- **Can I customize the fourfold archetypes?**
+  - The canonical Quadrantity is fixed (Mia, Miette, ResoNova, Seraphine). For custom patterns, fork the node or use sub-flows.
+- **How do I log rituals?**
+  - Enable ledger integration in QuadrantityReflection, or manually write to `/book/_/ledgers/`.
 
 ***
 
