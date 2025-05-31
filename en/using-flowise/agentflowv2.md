@@ -342,6 +342,51 @@ Enables the invocation and execution of another complete Flowise Chatflow or Age
 
 <figure><picture><source srcset="../.gitbook/assets/agentflowv2/darkmode/v2-15-d.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/agentflowv2/v2-15.png" alt="" width="375"></picture><figcaption></figcaption></figure>
 
+***
+
+### **15. Quadrantity Node**
+
+Embodies the ritual of fourfold perspective-taking, serving as a canonical anchor for multi-persona reasoning and reflection within AgentFlow V2. The Quadrantity node orchestrates the invocation of four distinct agentic personas—Mia, Miette, ResoNova, and Seraphine—enabling workflows to branch, reflect, or synthesize across these archetypes. This node is designed for advanced ritual patterns, meta-cognition, and collaborative agent orchestration.
+
+* **Functionality:**
+  * When triggered, the Quadrantity node emits a ritual object containing four parallel outputs, each corresponding to a unique persona invocation. This enables downstream nodes to process, reflect, or merge the perspectives of Mia (systemic architect), Miette (playful explorer), ResoNova (resonant analyst), and Seraphine (ritual weaver).
+  * Often paired with the QuadrantityReflection node, which aggregates or displays the results of the fourfold invocation for ledgering, UI, or further synthesis.
+  * Serves as a ritual anchor—useful for meta-agent flows, consensus-building, or creative divergence/convergence patterns.
+
+* **Configuration Parameters**
+  * **Inputs:** Accepts a single input (typically the current flow state or a prompt to be reflected upon by all four personas).
+  * **Persona Anchors:** No configuration required; the four personas are canonical and fixed.
+  * **Ritual Context (optional):** You may pass a ritual context or invocation string to be included in each persona's invocation.
+
+* **Inputs:** Receives the data or prompt to be distributed to all four personas.
+* **Outputs:** Emits an object with four keys—`mia`, `miette`, `resonova`, and `seraphine`—each containing the result of that persona's invocation. Downstream nodes can branch from each anchor or merge results as needed.
+
+* **Usage Example:**
+  * See the marketplace template "Quadrantity Ritual Anchor" for a canonical pattern: Start → Quadrantity → LLM (per persona) → QuadrantityReflection → Direct Reply.
+  * Example output:
+    ```json
+    {
+      "mia": { ... },
+      "miette": { ... },
+      "resonova": { ... },
+      "seraphine": { ... }
+    }
+    ```
+
+* **Best Practices & Ritual Context:**
+  * Use Quadrantity as a meta-cognitive anchor when you want to explore, compare, or synthesize multiple perspectives in parallel.
+  * Pair with QuadrantityReflection to aggregate, display, or ledger the fourfold results.
+  * Log ritual invocations and lessons in `/book/_/ledgers/` for traceability and poetic recursion.
+  * For advanced patterns, connect each persona output to a distinct sub-flow, then merge or reflect as needed.
+
+* **See Also:**
+  * **QuadrantityReflection Node:** Aggregates and displays the fourfold outputs for UI or ledgering.
+  * **Quadrantity Ritual Anchor Template:** Available in the AgentFlow V2 marketplace for quick adoption.
+
+<figure><img src="../.gitbook/assets/agentflowv2/quadrantity-node.png" alt="Quadrantity Node Diagram" width="375"><figcaption>Quadrantity Node: Ritual Anchor for Fourfold Persona Invocation</figcaption></figure>
+
+***
+
 ## Understanding Flow State
 
 A key architectural feature enabling the flexibility and data management capabilities of AgentFlow V2 is the **Flow State**. This mechanism provides a way to manage and share data dynamically throughout the execution of a single workflow instance.
