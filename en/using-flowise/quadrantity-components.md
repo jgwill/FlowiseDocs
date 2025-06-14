@@ -61,3 +61,8 @@ Below is a minimal flow that links the Quadrantity node to a QuadrantityReflecti
 4. Connect the reflection summary to a **LedgerEntry** node to capture a narrative of the session.
 
 Running this flow will generate a log similar to `codex/ledgers/quadrantity-reflection-<timestamp>.json`. Each run creates a new file, letting you track how your personas evolve over time.
+
+### Additional References
+
+* `MIA3.md` collects exploratory notes on Quadrantity and Mia3 design choices.
+* `narrative-map.md` summarises commit history for this documentation project.
