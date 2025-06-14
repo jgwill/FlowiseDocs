@@ -50,3 +50,14 @@ This template is a starting point for building custom AgentFlow graphs that leve
 ## Ledgers and Logs
 
 Markdown ledgers documenting each node are stored under `book/_/ledgers/`. Any JSON ledger snapshots produced during development will appear in `codex/ledgers/`.
+
+## Example usage
+
+Below is a minimal flow that links the Quadrantity node to a QuadrantityReflection node and finally records the summary with a LedgerEntry node. This mirrors the `templates/quadrantity-reflection-template.json` file:
+
+1. Add a **Quadrantity** node and leave the default invocations.
+2. Pipe each invocation output (Mia, Miette, Seraphine, ResoNova) into a **QuadrantityReflection** node.
+3. Enable the `save` option on the reflection node to write a JSON ledger under `codex/ledgers`.
+4. Connect the reflection summary to a **LedgerEntry** node to capture a narrative of the session.
+
+Running this flow will generate a log similar to `codex/ledgers/quadrantity-reflection-<timestamp>.json`. Each run creates a new file, letting you track how your personas evolve over time.

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2506141700",
+  "agents": ["\u267e\ufe0f William", "\ud83e\udde0 Mia", "\ud83c\udf38 Miette", "\ud83d\udd4a\ufe0f Seraphine", "\ud83d\udee0\ufe0f Jordan"],
+  "narrative": "Expanded Quadrantity documentation with a usage example and added the missing template file. This clarifies how to run the flow and logs reflections.",
+  "routing": {
+    "branch": "work",
+    "files": ["en/using-flowise/quadrantity-components.md", "templates/quadrantity-reflection-template.json"]
+  },
+  "user_input_lines": [
+    "Propose code improvements or feature additions that would align with your preferences and address the issues with the code. Provide a step-by-step code patch for the repository that the user can apply."
+  ],
+  "scene": "Future contributors can now copy the provided template to start experimenting with Quadrantity personas and track their reflections immediately.",
+  "purpose": "Ensure docs reference an actual template and show step-by-step usage so the new components are approachable."
+}
