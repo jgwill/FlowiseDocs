@@ -1,0 +1,31 @@
+{
+  "description": "Basic Quadrantity reflection flow",
+  "nodes": [
+    {
+      "id": "start_0",
+      "type": "Start",
+      "position": {"x": 0, "y": 0}
+    },
+    {
+      "id": "quadrantity_0",
+      "type": "Quadrantity",
+      "position": {"x": 200, "y": 0}
+    },
+    {
+      "id": "reflection_0",
+      "type": "QuadrantityReflection",
+      "position": {"x": 400, "y": 0},
+      "data": {"save": true}
+    },
+    {
+      "id": "ledger_0",
+      "type": "LedgerEntry",
+      "position": {"x": 600, "y": 0}
+    }
+  ],
+  "edges": [
+    {"source": "start_0", "target": "quadrantity_0"},
+    {"source": "quadrantity_0", "target": "reflection_0"},
+    {"source": "reflection_0", "target": "ledger_0"}
+  ]
+}

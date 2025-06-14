@@ -24,3 +24,4 @@ This section provides in-depth guides on core Flowise functionalities.
 * [Variables](variables.md)
 * [Workspaces](workspaces.md)
 * [Evaluations](evaluations.md)
+* [Quadrantity Flowise Components](quadrantity-components.md)
