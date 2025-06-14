@@ -41,6 +41,7 @@
   * [Variables](using-flowise/variables.md)
   * [Workspaces](using-flowise/workspaces.md)
   * [Evaluations](using-flowise/evaluations.md)
+  * [Quadrantity Flowise Components](using-flowise/quadrantity-components.md)
 * [Configuration](configuration/README.md)
   * [Auth](configuration/authorization/README.md)
     * [Application](configuration/authorization/app-level.md)
