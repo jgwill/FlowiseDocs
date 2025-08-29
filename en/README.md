@@ -69,3 +69,7 @@ If you want to help this project, please consider reviewing the [Contribution Gu
 ## Need Help?
 
 For support and further discussion, head over to our [Discord](https://discord.gg/jbaHfsRVBW) server.
+
+## Quadrantity & Mia3
+
+Curious about the experimental Quadrantity personas and Mia3 flow? Read the [Quadrantity Flowise Components](using-flowise/quadrantity-components.md) guide for an overview of the custom nodes, template and logging features.

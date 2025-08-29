@@ -5,3 +5,4 @@
 - 075d756 Latest upstream update before this work.
 - [pending] Documentation for Quadrantity components added (this commit).
 - [pending] Added example usage section and template for Quadrantity reflection flow.
+- [pending] Linked Quadrantity docs from main README and summary; added references section.
